@@ -1,3 +1,22 @@
 body {
   padding-top: 40px;
 }
+
+body.landing-page, body.signup-page {
+  background: url(../assets/Oxford-Skyline.jpg) no-repeat center center fixed;
+  background-size: 100%;
+}
+
+.hero-unit, .signup-form-unit {
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+
+.signup-page form input {
+  height: 30px;
+}
+
+/*p.action {*/
+  /*text-align: center;*/
+/*}*/
+
