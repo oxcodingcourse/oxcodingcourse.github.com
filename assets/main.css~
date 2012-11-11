@@ -7,7 +7,7 @@ body.landing-page, body.signup-page {
   background-size: 100%;
 }
 
-body.landing-page-dgk {
+body.landing-page-dgk, body.signup-page {
   background: url(../assets/beach.jpg) no-repeat center center fixed;
   background-size: 100%;
 }
