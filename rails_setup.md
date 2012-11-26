@@ -1,3 +1,7 @@
+---
+title: Rails
+---
+
 # Setting up the 'MCR Bar' rails app
 
 ## Creating the app
