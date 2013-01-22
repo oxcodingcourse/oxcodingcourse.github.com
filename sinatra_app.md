@@ -69,7 +69,7 @@ See if you jazz this up a bit by making the greeting a bit longer. Maybe you cou
 
 So far we've just returned a text string to be displayed in the browser. What if we want to return html? 
 
-The best way to return custom html is to use a template - a basic html `shell` into which your specifics can be injected.
+The best way to return custom html is to use a template - a basic html 'shell' into which your specifics can be injected.
 
 There are many different options when it comes to templates and templating languages (the form of the instructions you use to tell the template interpreter where and how to insert your values). In ruby two of the front-runners are `erb` (Embedded RuBy) and `haml` (Html Abstraction Markup Language). Haml is really nice - it uses a stripped down syntax, which produces beautifully clean templates, but erb looks a lot closer to html so is easier to understand. We'll use erb for the moment.
 
