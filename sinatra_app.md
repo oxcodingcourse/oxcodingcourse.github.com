@@ -94,22 +94,52 @@ The erb code is included in ruby, so this should all work fine. If we had decide
 
 ## A bigger example
 
-We're still only returning a text string to the browser. To get a better idea of what can be done with templates it's good to look at a bigger example. 
+We're still only returning a text string to the browser. To get a better idea of what can be done with templates it's good to look at a bigger example. Luckily I prepared one earlier. To get this, go back to the shell and move into the folder containing greeting_app (`cd ..`). Then:
 
+    git clone git://github.com/TomClose/norrington_app.git
 
+We'll start by taking a quick look around.
 
+    cd norrington_app
+    ls
 
-## Deploying
+You'll recognise a few things here: for starters we have an `app.rb`, and a `views` folder. No surprises there. You'll also notice a `data` folder, and a `public` folder. The `data` folder is nothing special - it just contains the raw data used in this app. The `public` folder is a special folder that sinatra knows about; it's used for storing assets that will be served directly to the browser, e.g. css files, javascript files, and images.
 
+## Managing gems
 
+There's also a file called `Gemfile`. If you take a look inside this file (`cat Gemfile`) you'll see a few lines, including:
 
-## Does it blend?
+    gem sinatra
 
-Testing
+Gemfiles are ruby's way of specifying which gems a project depends on. When we're working alone it's ok to install gems one-by-one using `gem install ...`, but this can get tedious when working on a big project with others. You can also run into problems with different gem versions, which can cause subtle and annoying bugs.
+
+To make use of the Gemfile you need the bundler gem installed:
+
+    gem install bundler
+
+You can then load all the gems specified in the Gemfile, by typing
+
+    bundle install
+
+You'll also notice a file called Gemfile.lock. This specifies the precise versions of the gems that were installed when I did `bundle install` on my local machine. You should now have precisely the same gems installed on yours.
+
+It's possible to get a lot more advanced with gemfiles. For example you can use the gemfile to specify that you want a specific version of a gem, or a sufficiently recent one, or even provide the precise location (e.g. someone's github repo) where you want to install the gem from. We'll come across more complicated Gemfiles later.
+
+## Running the example
+
+You can run the `norrington_app` example as before, by doing
+
+    ruby app.rb
+
+[TODO: Write about explaining the code in app.rb]
+
+### Excercise
+
+Extend the Norrington app so that when I visit `localhost:4567/colleges/Oriel` I get a list of Oriel's Norrington scores over the years.
+
 
 ### Excercise
 
 Add Mixpanel analytics to your code, using the ruby library
 
-### 
 
