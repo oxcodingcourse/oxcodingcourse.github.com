@@ -89,14 +89,12 @@ There are a few ways to include CSS in an HTML file: the proper way is to link t
 
 Make your html header look like this:
 
-```html
-<head>
-  <title>Some title</title>
-  <style>
-    h1 { color: red; }
-  </style>
-</head>
-```
+    <head>
+      <title>Some title</title>
+      <style>
+        h1 { color: red; }
+      </style>
+    </head>
 
 The bit inside the `<style>` tags is CSS. The `h1` bit specifies the tag that will be styled. The bit inside the `{ ... }` specifies the styles that will be applied. Here we change the colour of the `h1` text red.
 
@@ -104,11 +102,9 @@ If you save the changes to the html file, then open (or refresh) the page in you
 
 Try out the following:
 
-```css
-p { color: blue; }
-div { background-color: pink; }
-div#lists { background-color: green; }
-```
+    p { color: blue; }
+    div { background-color: pink; }
+    div#lists { background-color: green; }
 
 The `div#lists` bit selects only the div with the lists id: `<div id="lists">`.
 
@@ -143,39 +139,39 @@ We'll do the second, even though you don't know what branches are. So for the mo
 To do the `gh-pages` approach first open the file `first_site/.git/config` in your browser. This might be tricky, as it is a hidden folder and might not show up in the list when you do `File > Open`. To find out how to do this google "windows show hidden files" or similar.
 
 It should look like this:
-"""
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
-	ignorecase = true
-	precomposeunicode = false
-[remote "origin"]
-	url = https://github.com/TomClose/first_site.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
-"""
+
+    [core]
+      repositoryformatversion = 0
+      filemode = true
+      bare = false
+      logallrefupdates = true
+      ignorecase = true
+      precomposeunicode = false
+    [remote "origin"]
+      url = https://github.com/TomClose/first_site.git
+      fetch = +refs/heads/*:refs/remotes/origin/*
+    [branch "master"]
+      remote = origin
+      merge = refs/heads/master
+
 You want to change it so that it looks like this:
-"""
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
-	ignorecase = true
-	precomposeunicode = false
-[remote "origin"]
-	url = https://github.com/TomClose/first_site.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
-  push = +refs/heads/master:refs/heads/gh-pages
-  push = +refs/heads/master:refs/heads/master
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
-"""
+
+    [core]
+      repositoryformatversion = 0
+      filemode = true
+      bare = false
+      logallrefupdates = true
+      ignorecase = true
+      precomposeunicode = false
+    [remote "origin"]
+      url = https://github.com/TomClose/first_site.git
+      fetch = +refs/heads/*:refs/remotes/origin/*
+      push = +refs/heads/master:refs/heads/gh-pages
+      push = +refs/heads/master:refs/heads/master
+    [branch "master"]
+      remote = origin
+      merge = refs/heads/master
+
 and then save the file. Don't worry about what this means right now.
 
 If you then do
