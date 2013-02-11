@@ -15,11 +15,11 @@ The first thing you will need to get used to is moving around. Start by printing
 
     $ pwd
 
-Then have a look at what's in that directory (_list_ the contents):
+Then have a look at what's in that directory ( _list_ the contents):
 
     $ ls
 
-To move up a directory (_change directory_) do
+To move up a directory ( _change directory_ ) do
 
     $ cd ..
 
