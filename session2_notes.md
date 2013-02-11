@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Session 2 Notes
-----
+---
 
 # Session 2 Notes
 
