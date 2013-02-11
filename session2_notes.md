@@ -97,16 +97,19 @@ Make your html header look like this:
   </style>
 </head>
 ```
+
 The bit inside the `<style>` tags is CSS. The `h1` bit specifies the tag that will be styled. The bit inside the `{ ... }` specifies the styles that will be applied. Here we change the colour of the `h1` text red.
 
 If you save the changes to the html file, then open (or refresh) the page in your browser you should see the changes. By opening the developer tools, and hovering over the `h1` you should be able to see your css rule at the side.
 
 Try out the following:
+
 ```css
 p { color: blue; }
 div { background-color: pink; }
 div#lists { background-color: green; }
 ```
+
 The `div#lists` bit selects only the div with the lists id: `<div id="lists">`.
 
 If anything, these changes will have made your site look a lot worse - but I hope you get the idea!
