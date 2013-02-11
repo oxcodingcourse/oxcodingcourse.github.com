@@ -23,6 +23,10 @@ Create a new folder:
 
     $ mkdir name_of_new_folder
 
+To move a file:
+
+    $ mv old_dir/file new_dir/file
+
 
 ## Git commands
 
