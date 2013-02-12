@@ -139,7 +139,7 @@ We'll do the second, even though you don't know what branches are. So for the mo
 
 To do the `gh-pages` approach first open the file `first_site/.git/config` in your code editor. This might be tricky, as it is a hidden folder and might not show up in the list when you do `File > Open`. To find out how to do this google "windows show hidden files" or similar.
 
-It should look like this:
+It should look something like this:
 
     [core]
       repositoryformatversion = 0
