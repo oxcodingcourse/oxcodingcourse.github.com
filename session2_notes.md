@@ -137,7 +137,7 @@ Github will host an html site for free for you, through   a service called [gith
 
 We'll do the second, even though you don't know what branches are. So for the moment, some of this won't make much sense - hopefully it will at some point in the future!
 
-To do the `gh-pages` approach first open the file `first_site/.git/config` in your browser. This might be tricky, as it is a hidden folder and might not show up in the list when you do `File > Open`. To find out how to do this google "windows show hidden files" or similar.
+To do the `gh-pages` approach first open the file `first_site/.git/config` in your code editor. This might be tricky, as it is a hidden folder and might not show up in the list when you do `File > Open`. To find out how to do this google "windows show hidden files" or similar.
 
 It should look like this:
 
