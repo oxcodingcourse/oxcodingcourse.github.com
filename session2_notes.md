@@ -125,15 +125,16 @@ Go to github, login, and click "Create New Repo" in the top left hand corner. Fo
     $ git remote add origin https://github.com/yourusername/first_site.git
     $ git push -u origin master
 
-You should now be prompted to add your github username and password. If all goes well, when you go to github you should see your new site.
+You should now be prompted to add your github username and password. If all goes well, when you go to github you should see the `first_site` folder containing your html file.
 
-## Homework
+## For next time
 
 ### Get github to serve your page as a website
 
 Github will host an html site for free for you, through   a service called [github pages](http://pages.github.com/). There are two possibilities for telling github to make your code into a website:
 1. Call your repo `yourusername.github.com`
 2. Push your site to a branch called `gh-pages`
+
 We'll do the second, even though you don't know what branches are. So for the moment, some of this won't make much sense - hopefully it will at some point in the future!
 
 To do the `gh-pages` approach first open the file `first_site/.git/config` in your browser. This might be tricky, as it is a hidden folder and might not show up in the list when you do `File > Open`. To find out how to do this google "windows show hidden files" or similar.
@@ -199,7 +200,7 @@ For the first bit you need to log in to your domain registrar and change the DNS
 
 ### Make your page look better
 
-Try messing around with your css to make your page look a bit better. The following resources might be useful:
+Try experimenting with your css to make your page look a bit better. The following resources might be useful:
 - [HTMLDog css tutorials](http://www.htmldog.com/guides/cssbeginner/) worth a skim to find out a bit more about css
 - [CSS ZenGarden](http://www.csszengarden.com/) - all the different designs here use exactly the same html. A bit over-the-top but shows what can be done with css.
 
