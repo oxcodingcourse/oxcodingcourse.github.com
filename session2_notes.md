@@ -198,6 +198,37 @@ The second bit is easy:
 
 For the first bit you need to log in to your domain registrar and change the DNS settings. You want an *A-record* pointing to `204.232.175.78` (which is github.com). Note that it can take up to a couple of days for DNS changes to propagate.
 
+<div class='new'>
+
+If you're using 123-reg, your should log in, select your domain from the list, and click "Manage". You should then go to "Manage DNS".
+
+![123-reg DNS Settings](./assets/dns_settings.png)
+
+Your changes won't take effect immediately. You can check by visiting your url (which should end you up at github), or by running
+
+    $ host yourdomain.com
+
+at the command prompt (or `nslookup` on windows).
+
+### Note on seeing your page
+
+If your page is called `first_page.html` and your git repository is called `first_site`, to see it (as a github page) you need to go to `yourusername.github.com/first_site/first_page`. If you go to `yourusername.github.com/first_site` you will see a github error page.
+
+This is also the case when you set up your domain name: you will need to go you `yourdomain.com/first_page` to see the page, and `yourdomain.com` will show a github error page.
+
+If you want to change this behaviour, and see the page at `yourdomain.com`, all you need to do is change your page's name to `index.html`:
+
+    cd first_site
+    mv first_page.html index.html
+    git add .
+    git add -u
+    git commit -m "Renamed first page"
+    git push
+
+This works because by convention pretty much all servers (github's included) will serve the page called `index.html` if you don't specify anything else. (The `git add -u` is the command you need to tell git that you've deleted or renamed somthing - otherwise it'll add the new `index.html` but won't notice that `first_page.html` isn't there.)
+
+</div>
+
 ### Make your page look better
 
 Try experimenting with your css to make your page look a bit better. The following resources might be useful:
