@@ -204,6 +204,8 @@ If you're using 123-reg, your should log in, select your domain from the list, a
 
 ![123-reg DNS Settings](./assets/dns_settings.png)
 
+(The @ dns entry stands for the root or bard domain.)
+
 Your changes won't take effect immediately. You can check by visiting your url (which should end you up at github), or by running
 
     $ host yourdomain.com
