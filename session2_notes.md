@@ -197,9 +197,9 @@ The second bit is easy:
 - Save that file as `CNAME` (with no extension) in your `first_site` folder
 - Add and commit your changes locally, then push to github:
 
-    git add .
-    git commit -m "Added CNAME"
-    git push
+     git add .
+     git commit -m "Added CNAME"
+     git push
 
 For the first bit you need to log in to your domain registrar and change the DNS settings. You want an *A-record* pointing to `204.232.175.78` (which is github.com). Note that it can take up to a couple of days for DNS changes to propagate.
 
