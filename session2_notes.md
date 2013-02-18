@@ -197,6 +197,7 @@ The second bit is easy:
 - Save that file as `CNAME` (with no extension) in your `first_site` folder
 - Add and commit your changes locally, then push to github:
 
+
      git add .
      git commit -m "Added CNAME"
      git push
