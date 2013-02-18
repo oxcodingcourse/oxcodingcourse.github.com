@@ -189,12 +189,16 @@ There are two things you need to do to get your domain name working with your gi
 Github explains this [here](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
 
 The second bit is easy:
-- Go to the `first_site` folder on your laptop
-- Create a file called `CNAME` (note: no file extension)
-- Put your domain name in that file:
+- Open your code editor, and create a new file
+- Write your domain name on the first line of the new file e.g:
 ```
   mydomain.com
 ```
+- Save that file as `CNAME` (with no extension) in your `first_site` folder
+- Add and commit your changes locally, then push to github:
+    git add .
+    git commit -m "Added CNAME"
+    git push
 
 For the first bit you need to log in to your domain registrar and change the DNS settings. You want an *A-record* pointing to `204.232.175.78` (which is github.com). Note that it can take up to a couple of days for DNS changes to propagate.
 
