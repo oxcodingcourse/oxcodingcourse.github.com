@@ -7,3 +7,4 @@ title: Coding Course Notes
 
 - [Session 2 Cheatsheet](./session2_cheatsheet)
 - [Session 2 Notes](./session2_notes)
+- [Session 3 Cheatsheet](./session3_cheatsheet)
