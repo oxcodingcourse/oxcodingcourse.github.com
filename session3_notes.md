@@ -131,6 +131,7 @@ To do this on github, go to your forked landing page repository and click on 'Se
   - Flesh out the text to describe the course
   - Try changing the picture
   - Have a look at the twitter bootstrap page
+  - Look at [these tips](http://visualwebsiteoptimizer.com/split-testing-blog/landing-page-optimization-tips-increases-sales-conversions/)
   - **Every member of your team should try to do at least one push to the repository by next week**
 
 When you're doing collaborative work like this you might find that your pushes are rejected because the repository on github has changed since you last pulled it. To fix this you need to pull down the changes before pushing up. A common workflow might look like this:
