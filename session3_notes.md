@@ -55,9 +55,7 @@ Last time we looked at pushing your code up to github. Push up the changes you'v
     git commit -m "Added twitter bootstrap"
     git push
 
-You can think of this code as being published on github for others to read. This brings us to our first way of collaborating with others:
-
-![Publishing model](assets/publishing_model.jpg)
+You can think of this code as being published on github for others to read. This brings us to our first way of collaborating with others: the publishing model.
 
 In the publishing model one person pushes their work to github, and others pull it down and use it. To do this in practice you need to use the `git clone` command:
 
@@ -110,8 +108,6 @@ You'll find that you can't push to my repository.
 
 One of the options for sharing your changes with me, is for you to publish your repository too. I can then pull your changes down just as you pulled mine.
 
-![Forking model](assets/forking_model.jpg)
-
 Notice that this situation is symmetric - my repositories are equivalent to yours. This makes it a suitable model for many open source projects, where the project maintainer might change over time.
 
 Github makes this model easy by providing a 'forking' button. Go to [github.com/TomClose/landing_page](github.com/TomClose/landing_page) and press the 'Fork' button. You now have a copy of my repository that you can push to if you want to. If you want do send me some changes you can do this by going back to [github.com/TomClose/landing_page](github.com/TomClose/landing_page) and submitting a 'pull request'.
@@ -119,8 +115,6 @@ Github makes this model easy by providing a 'forking' button. Go to [github.com/
 ## Coallaboration: Sharing model
 
 The other way or collaborating with git is the 'sharing' model: one person puts the repository on github and gives other people permissions, so you can all push to the same place.
-
-![Sharing model](assets/sharing_model.jpg)
 
 To do this on github, go to your forked landing page repository and click on 'Settings' on the right hand side. Then go to 'Collaborators' and add your team members' github usernames. 
 
