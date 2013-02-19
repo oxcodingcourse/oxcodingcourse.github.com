@@ -132,5 +132,21 @@ To do this on github, go to your forked landing page repository and click on 'Se
   - Try changing the picture
   - Have a look at the twitter bootstrap page
   - **Every member of your team should try to do at least one push to the repository by next week**
+
+When you're doing collaborative work like this you might find that your pushes are rejected because the repository on github has changed since you last pulled it. To fix this you need to pull down the changes before pushing up. A common workflow might look like this:
+
+    git pull
+    [ make some changes ... ]
+    git add .
+    git commit -m "I made some changes"
+    git push
+    [ push rejected - online repository has changed (while you were making your changes) ]
+    git pull
+    [ if there's a merge conflict, fix this, add and commit again ]
+    git push
+    [ should work this time ]
+
+Good luck!
+
 </div>
 
