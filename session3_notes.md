@@ -57,11 +57,47 @@ You can think of this code as being published on github for others to read. This
 
 ![Publishing model](assets/publishing_model.jpg)
 
+In the publishing model one person pushes their work to github, and others pull it down and use it. To do this in practice you need to use the `git clone` command:
+
+    cd coding_course
+    git clone git://github.com/TomClose/first_site.git toms_site
+
+You should now see a new file called `toms_site` in your `coding_course` folder, and be able to open `toms_site/index.html` in your browser. The clone operation has copied a local version of the repository onto your computer.
+
+Git will help you keep this local copy updated. If I've made some changes and pushed them up to github, you just need to run
+
+    git pull
+
+to pull them down onto your laptop.
+
 ## Conflicts
 
+The version on your laptop is stored in a fully functional git repository: you can make changes to the site and commit it if you want. What happens if we both make changes at the same time?
 
+Open `toms_site/index.html` in your code editor, and change the page heading (inside `<h1>`) to something of your choosing. (At the same time I'll also make a change). When you're done, commit your change to the local repository:
+
+    git add .
+    git commit -m "Changed heading"
+
+I'll push my change up and you pull it down:
+
+    git pull
+
+You should now have a message telling you that you have a merge conflict. This is because our two changes have been made at the same time, so git is unabled to work out which is the up-to-date one to keep. If you look in your file you should see things that look like
+
+    <<<<<<< HEAD
+        <h1 class="special">My Page</h1>
+    =======
+        <h1 class="special">Tom C's page</h1>
+    >>>>>>> d76d5a62894057f9c5a4dce0fe5f25110eddd24f
+
+To fix the merge conflict you need to edit this by hand, picking the version you want and then do:
+
+    git add .
+    git commit -m "Fixed conflicts"
 
 ## Collaboration: Forking model
+
 
 
 ## Coallaboration: Sharing model
