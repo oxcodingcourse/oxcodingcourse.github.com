@@ -87,13 +87,13 @@ I'll push my change up and you pull it down:
 
 You should now have a message telling you that you have a merge conflict. This is because our two changes have been made at the same time, so git is unabled to work out which is the up-to-date one to keep. If you look in your file you should see things that look like
 
-```
+
     <<<<<<< HEAD
         <h1 class="special">My Page</h1>
     =======
         <h1 class="special">Tom C's page</h1>
     >>>>>>> d76d5a62894057f9c5a4dce0fe5f25110eddd24f
-```
+
 
 To fix the merge conflict you need to edit this by hand, picking the version you want and then do:
 
