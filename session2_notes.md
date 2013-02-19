@@ -203,8 +203,6 @@ The second bit is easy:
 
 For the first bit you need to log in to your domain registrar and change the DNS settings. You want an *A-record* pointing to `204.232.175.78` (which is github.com). Note that it can take up to a couple of days for DNS changes to propagate.
 
-<div class='new' markdown="1">
-
 If you're using 123-reg, your should log in, select your domain from the list, and click "Manage". You should then go to "Manage DNS".
 
 ![123-reg DNS Settings](./assets/dns_settings.png)
@@ -233,8 +231,6 @@ If you want to change this behaviour, and see the page at `yourdomain.com`, all 
     git push
 
 This works because by convention pretty much all servers (github's included) will serve the page called `index.html` if you don't specify anything else. (The `git add -u` is the command you need to tell git that you've deleted or renamed somthing - otherwise it'll add the new `index.html` but won't notice that `first_page.html` isn't there.)
-
-</div>
 
 ### Make your page look better
 
