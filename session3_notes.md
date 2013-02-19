@@ -87,6 +87,13 @@ I'll push my change up and you pull it down:
 
 You should now have a message telling you that you have a merge conflict. This is because our two changes have been made at the same time, so git is unabled to work out which is the up-to-date one to keep. If you look in your file you should see things that look like
 
+```
+<<<<<<< HEAD
+    <h1 class="special">My Page</h1>
+=======
+    <h1 class="special">Tom C's page</h1>
+>>>>>>> d76d5a62894057f9c5a4dce0fe5f25110eddd24f
+```
 
 To fix the merge conflict you need to edit this by hand, picking the version you want and then do:
 
@@ -107,7 +114,7 @@ One of the options for sharing your changes with me, is for you to publish your 
 
 Notice that this situation is symmetric - my repositories are equivalent to yours. This makes it a suitable model for many open source projects, where the project maintainer might change over time.
 
-Github makes this model easy by providing a 'forking' button. Go to <github.com/TomClose/landing_page> and press the 'Fork' button. You now have a copy of my repository that you can push to if you want to. If you want do send me some changes you can do this by going back to <github.com/TomClose/landing_page> and submitting a 'pull request'.
+Github makes this model easy by providing a 'forking' button. Go to [github.com/TomClose/landing_page](github.com/TomClose/landing_page) and press the 'Fork' button. You now have a copy of my repository that you can push to if you want to. If you want do send me some changes you can do this by going back to [github.com/TomClose/landing_page](github.com/TomClose/landing_page) and submitting a 'pull request'.
 
 ## Coallaboration: Sharing model
 
