@@ -126,7 +126,7 @@ To do this on github, go to your forked landing page repository and click on 'Se
         push = +refs/heads/master:refs/heads/gh-pages
         push = +refs/heads/master:refs/heads/master
 
-    to the `.git/config` file in the `landing_page` folder
+    to the `.git/config` file in the `landing_page` folder (see last week's notes)
 2. Work on your page
   - Flesh out the text to describe the course
   - Try changing the picture
