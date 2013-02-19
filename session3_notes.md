@@ -121,8 +121,16 @@ To do this on github, go to your forked landing page repository and click on 'Se
 <div class='new' markdown="1">
 
 ## For next time
+1. Publish you landing pages as a github page: Everyone needs to add the lines
 
+      push = +refs/heads/master:refs/heads/gh-pages
+      push = +refs/heads/master:refs/heads/master
 
-
+    to the `.git/config` file in the `landing_page` folder
+2. Work on your page
+  - Flesh out the text to describe the course
+  - Try changing the picture
+  - Have a look at the twitter bootstrap page
+  - *Every member of your team should do one push to the repository by next week*
 </div>
 
