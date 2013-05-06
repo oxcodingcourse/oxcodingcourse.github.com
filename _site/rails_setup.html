@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .new {
+        border: 10px solid #F9D654;
+        padding: 5px;
+      }
+    </style>
+    <title>Coding course</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h1 id='setting_up_the_mcr_bar_rails_app'>Setting up the &#8216;MCR Bar&#8217; rails app</h1>
+
+<h2 id='creating_the_app'>Creating the app</h2>
+
+<pre><code>rails new mcr_bar
+cd mcr_bar
+git init
+git add .
+git commmit -m &quot;Initial commit&quot;</code></pre>
+
+<h2 id='starting_the_server'>Starting the server</h2>
+
+<pre><code>rails s</code></pre>
+
+<p>If you now visit http://localhost:3000 you should see the standard rails welcome page.</p>
+
+<h2 id='creating_the_item_model'>Creating the item model</h2>
+
+<p>The item model will hold the details of everything that can be purchased at the bar - primarily different types of drink. We may want to expand this model in future (e.g. by allowing specification of constituent parts), but for the time being we&#8217;ll keep it simple and just specify <code>name</code>, <code>price</code> and <code>description</code>.</p>
+
+<pre><code>rails g scaffold item name:string price:integer description:text</code></pre>
+
+<p>You&#8217;ll see that we&#8217;ve chosen an <code>integer</code> type for price: we&#8217;ve chosen to store the price in pennies, which should circumvent the problems caused by storing fixed precision decimals as floating point numbers (which treat 3.49999999999&#8230; and 3.50 as the same numbers).</p>
+
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </body>
+
+</html>

@@ -1,9 +1,3 @@
----
-layout: default
-title: Session 1 Exercises
----
-
-
 # Session 1 Exercises
 
 ## Exercise 1

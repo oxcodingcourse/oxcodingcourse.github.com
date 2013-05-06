@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .new {
+        border: 10px solid #F9D654;
+        padding: 5px;
+      }
+    </style>
+    <title>Coding course</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h1 id='database_app'>Database app</h1>
+
+<p>Last time we loaded data in via a hash. This had problems: * Clunky * Inefficient * Not scalable</p>
+
+<h2 id='setting_up_a_basic_database'>Setting up a basic database</h2>
+
+<p>Put following in a file called <code>db.rb</code>:</p>
+
+<pre><code>require &#39;rubygems&#39;
+require &#39;active_record&#39;
+
+ActiveRecord::Base.establish_connection(
+  adapter: &quot;sqlite3&quot;,
+  database: &quot;data/database.sqlite3&quot;,
+  pool:5,
+  timeout:5000 )
+
+ActiveRecord::Migration.create_table :colleges do |t|
+  t.string :name
+end
+
+class College &lt; ActiveRecord::Base
+end</code></pre>
+
+<p>Copy and paste into irb session. Try the following:</p>
+
+<pre><code>c = College.new
+c.name = &quot;Oriel&quot;
+c.name</code></pre>
+
+<p>We&#8217;ve created a &#8216;college&#8217; object, and set it&#8217;s name.</p>
+
+<pre><code>c.save</code></pre>
+
+<p>We&#8217;ve now saved our college object. We can view it by using firefox&#8217;s sqlite3 dataviewer.</p>
+
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </body>
+
+</html>

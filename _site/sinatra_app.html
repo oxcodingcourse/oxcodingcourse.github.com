@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .new {
+        border: 10px solid #F9D654;
+        padding: 5px;
+      }
+    </style>
+    <title>Coding course</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h1 id='sinatra_app'>Sinatra app</h1>
+
+<p>In this session we will begin to look at building dynamic websites - sites where the HTML is created on the fly when the user makes the request. This will ultimately allow us to build fully fledged web applications, but now we&#8217;ll be looking at the simplest example possible, using a lightweight ruby framework called sinatra.</p>
+
+<h2 id='getting_going_with_sinatra'>Getting going with sinatra</h2>
+
+<p>We first create a new directory to hold our simple application:</p>
+
+<pre><code>mkdir greeting_app
+cd greeting_app</code></pre>
+
+<p>Create a new file in this folder called <code>hi.rb</code>, with the following contents:</p>
+
+<pre><code>require &#39;sinatra&#39;
+
+get &#39;/&#39; do
+  &quot;Hello&quot;
+end</code></pre>
+
+<p>That&#8217;s it! This is pretty much the simplest sinatra app you can write. The first line tells ruby to load the sinatra gem, which contains the code that will tell the ruby server how to interpret the rest of the file.</p>
+
+<p>The next bit tells the server that if it receives a <code>get</code> request on the root domain, to respond with the string &#8220;Hello&#8221;. The root of a domain is just the plain address of the website, e.g. <code>www.example.com</code> (and not <code>www.example.com/about</code>).</p>
+
+<p>To get this code running on your laptop you need to do two things: install the sinatra gem, and then run our example file.</p>
+
+<p>Installing the gem involves pulling the sinatra code down from the internet. Thankfully ruby comes with an excellent code management system in the form of &#8216;Rubygems&#8217;. To get the sinatra code you just need to do</p>
+
+<pre><code>gem install sinatra</code></pre>
+
+<p>You can then run the app with</p>
+
+<pre><code>ruby hi.rb</code></pre>
+
+<p>This will start a server on your local machine. You should see some output like:</p>
+
+<pre><code>== Sinatra/1.3.3 has taken the stage on 4567 for development with backup from Thin
+&gt;&gt; Thin web server (v1.3.1 codename Triple Espresso)
+&gt;&gt; Maximum connections set to 1024
+&gt;&gt; Listening on 0.0.0.0:4567, CTRL+C to stop</code></pre>
+
+<p>You can visit your site by typing localhost:4567 into your browser. You should see the word &#8220;Hello&#8221;.</p>
+
+<h2 id='getting_personal'>Getting personal</h2>
+
+<p>We have a basics of a dynamic site up and running, but so far it&#8217;s all pretty underwhelming. Don&#8217;t get too despondent though - this next part&#8217;s almost guaranteed to completely blow your mind. We&#8217;re going to get the app to personalise its greeting. Add the following piece of code to <code>hi.rb</code>:</p>
+
+<pre><code>get &#39;/:name&#39; do
+  &quot;Hello #{params[:name]}&quot;
+end</code></pre>
+
+<p>You should now try visiting localhost:4567/tom (or similar). It probably won&#8217;t work at first - you&#8217;ll get an error page saying something like &#8220;Sinatra doesn&#8217;t know this ditty&#8221;. The server doesn&#8217;t know about the changes to the ruby file. To make this work you need to restart the server - go to the console, press Ctrl-c, and then do <code>ruby hi.rb</code> again. If all is well, when you reload the page in your browser you should see &#8220;Hello tom&#8221;.</p>
+
+<p>When you&#8217;ve finished cleaning bits of mind off your keyboard, you might start wondering if we&#8217;ve done anything special at all here - after all, you could get the same effect with a static site. I guess the point is that with a static site you&#8217;d need to create an individual page for each possible name, which would soon become unweildy and unmanageable. Here we&#8217;ve taken some input from the url specified by the user and crafted a response around it.</p>
+
+<h3 id='excercise'>Excercise</h3>
+
+<p>See if you jazz this up a bit by making the greeting a bit longer. Maybe you could add some randomness, so that it says &#8220;Hi&#8221; sometimes. You might want to investigate ruby&#8217;s Array#shuffle method for this.</p>
+
+<h2 id='grownup_responses'>Grown-up responses</h2>
+
+<p><span>Not sure I need anything here - sinatra seems to manage response codes ok</span></p>
+
+<h2 id='an_app_with_a_view'>An app with a view</h2>
+
+<p>So far we&#8217;ve just returned a text string to be displayed in the browser. What if we want to return html?</p>
+
+<p>The best way to return custom html is to use a template - a basic html &#8216;shell&#8217; into which your specifics can be injected.</p>
+
+<p>There are many different options when it comes to templates and templating languages (the form of the instructions you use to tell the template interpreter where and how to insert your values). In ruby two of the front-runners are <code>erb</code> (Embedded RuBy) and <code>haml</code> (Html Abstraction Markup Language). Haml is really nice - it uses a stripped down syntax, which produces beautifully clean templates, but erb looks a lot closer to html so is easier to understand. We&#8217;ll use erb for the moment.</p>
+
+<p>We&#8217;ll start by reproducing our current behaviour but using an erb template. You need to create a new folder in the greeting_app directory called <code>views</code>:</p>
+
+<pre><code>mkdir views</code></pre>
+
+<p>Then create a file called <code>hello.erb</code> with the following contents:</p>
+
+<pre><code>Hello &lt;%= @name %&gt;</code></pre>
+
+<p>You&#8217;ll notice the <code>&lt;%= ... %&gt;</code> tags. These are erb&#8217;s way of saying &#8216;treat the following as ruby code&#8217;.</p>
+
+<p>We also need to make changes in <code>app.rb</code>:</p>
+
+<pre><code>get &#39;/:name&#39; do
+  @name = params[:name]
+  erb :hello
+end</code></pre>
+
+<p>The erb code is included in ruby, so this should all work fine. If we had decided to use haml, we would have needed to install the haml gem, just like we did with sinatra.</p>
+
+<h2 id='a_bigger_example'>A bigger example</h2>
+
+<p>We&#8217;re still only returning a text string to the browser. To get a better idea of what can be done with templates it&#8217;s good to look at a bigger example. Luckily I prepared one earlier. To get this, go back to the shell and move into the folder containing greeting_app (<code>cd ..</code>). Then:</p>
+
+<pre><code>git clone git://github.com/TomClose/norrington_app.git</code></pre>
+
+<p>We&#8217;ll start by taking a quick look around.</p>
+
+<pre><code>cd norrington_app
+ls</code></pre>
+
+<p>You&#8217;ll recognise a few things here: for starters we have an <code>app.rb</code>, and a <code>views</code> folder. No surprises there. You&#8217;ll also notice a <code>data</code> folder, and a <code>public</code> folder. The <code>data</code> folder is nothing special - it just contains the raw data used in this app. The <code>public</code> folder is a special folder that sinatra knows about; it&#8217;s used for storing assets that will be served directly to the browser, e.g. css files, javascript files, and images.</p>
+
+<h2 id='managing_gems'>Managing gems</h2>
+
+<p>There&#8217;s also a file called <code>Gemfile</code>. If you take a look inside this file (<code>cat Gemfile</code>) you&#8217;ll see a few lines, including:</p>
+
+<pre><code>gem sinatra</code></pre>
+
+<p>Gemfiles are ruby&#8217;s way of specifying which gems a project depends on. When we&#8217;re working alone it&#8217;s ok to install gems one-by-one using <code>gem install ...</code>, but this can get tedious when working on a big project with others. You can also run into problems with different gem versions, which can cause subtle and annoying bugs.</p>
+
+<p>To make use of the Gemfile you need the bundler gem installed:</p>
+
+<pre><code>gem install bundler</code></pre>
+
+<p>You can then load all the gems specified in the Gemfile, by typing</p>
+
+<pre><code>bundle install</code></pre>
+
+<p>You&#8217;ll also notice a file called Gemfile.lock. This specifies the precise versions of the gems that were installed when I did <code>bundle install</code> on my local machine. You should now have precisely the same gems installed on yours.</p>
+
+<p>It&#8217;s possible to get a lot more advanced with gemfiles. For example you can use the gemfile to specify that you want a specific version of a gem, or a sufficiently recent one, or even provide the precise location (e.g. someone&#8217;s github repo) where you want to install the gem from. We&#8217;ll come across more complicated Gemfiles later.</p>
+
+<h2 id='running_the_example'>Running the example</h2>
+
+<p>You can run the <code>norrington_app</code> example as before, by doing</p>
+
+<pre><code>ruby app.rb</code></pre>
+
+<p><span>TODO: Write about explaining the code in app.rb</span></p>
+
+<h3 id='excercise'>Excercise</h3>
+
+<p>Extend the Norrington app so that when I visit <code>localhost:4567/colleges/Oriel</code> I get a list of Oriel&#8217;s Norrington scores over the years.</p>
+
+<h3 id='excercise'>Excercise</h3>
+
+<p>Add Mixpanel analytics to your code, using the ruby library</p>
+
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </body>
+
+</html>
