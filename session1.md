@@ -50,7 +50,7 @@ title: Session 1 Exercises
 
 ## Exercise 6
 <div class='exercise' markdown="1">
-1. Go to [github.com/TomClose/first_site/blob/master/index.html]
+1. Go to [](./example.html)
 2. Click the 'Copy to Clipboard' button (just underneath 'Files')
 3. Go to Sublime Text and create a new file
 4. Paste the contents into the new file
