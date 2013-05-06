@@ -56,3 +56,12 @@ title: Session 1 Exercises
 4. Paste the contents into the new file
 5. Save it as 'toms_page.html' in 'first_site'
 </div>
+
+
+## For next time
+
+1. Go to [RailsInstaller](railsinstaller.org) and install the software
+2. Buy a domain name from a registrar (e.g. [123-reg](123-reg.co.uk))
+3. Create an account at [GitHub](github.com)
+4. Make your `index.html` page more interesting. Add a picture and a link.
+
