@@ -43,7 +43,7 @@ title: Session 1 Exercises
 2. Change the text to
 
 ```
-	<h1>Hello</h1>
+	&lt;h1&gt;Hello&lt;/h1&gt;
 ```
 
 3. Go back to 'index.html' in Chrome and press the refresh button.
