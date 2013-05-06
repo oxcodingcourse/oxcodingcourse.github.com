@@ -41,9 +41,9 @@ title: Session 1 Exercises
 <div class='exercise' markdown="1">
 1. Go back to 'index.html' in Sublime Text.
 2. Change the text to
-
+```
 		<h1>Hello</h1>
-
+```
 3. Go back to 'index.html' in Chrome and press the refresh button.
 
 </div>
