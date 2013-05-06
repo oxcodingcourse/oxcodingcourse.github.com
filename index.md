@@ -5,12 +5,14 @@ title: Coding Course Notes
 
 # Coding course resources
 
-- [Session 2 Cheatsheet](./session2_cheatsheet)
+- [Session 1 Exercises](./session1_exercises)
+
+<!-- - [Session 2 Cheatsheet](./session2_cheatsheet)
 - [Session 2 Notes](./session2_notes)
 - [Session 3 Cheatsheet](./session3_cheatsheet)
-- [Session 3 Notes](./session3_notes)
+- [Session 3 Notes](./session3_notes) -->
 
-## Final session
+<!-- ## Final session
 
 - [Javascript app](http://nhswhocares.info)
 - [Javascript app code](https://github.com/TomClose/nhshackday)
@@ -20,4 +22,4 @@ title: Coding Course Notes
 - [Rails app](http://nameless-reef-9520.herokuapp.com)
 - [Google analytics](http://www.google.co.uk/analytics/)
 - [Mixpanel](http://mixpanel.com)
-- [Feedback](https://docs.google.com/forms/d/1M4kWyGsbz6dl0NIMXvVJ3tHg0deY6AIvQa9mFeWD41k/viewform)
+- [Feedback](https://docs.google.com/forms/d/1M4kWyGsbz6dl0NIMXvVJ3tHg0deY6AIvQa9mFeWD41k/viewform) -->
