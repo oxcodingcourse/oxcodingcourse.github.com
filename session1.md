@@ -9,26 +9,26 @@
 ## Exercise 2
 
 <div class='exercise' markdown="1">
-	1. Open Google Chrome
-	2. Go to any web site (eg. [this one](/))
-	3. View the page source (View > Developer > View Source)
+1. Open Google Chrome
+2. Go to any web site (eg. [this one](/))
+3. View the page source (View > Developer > View Source)
 </div>
 
 ## Exercise 3
 <div class='exercise' markdown="1">
-	1. Open Google Chrome
-	2. Go to any web site
-	3. Look at the page using developer tools (View > Developer > Developer Tools)
+1. Open Google Chrome
+2. Go to any web site
+3. Look at the page using developer tools (View > Developer > Developer Tools)
 </div>
 
 ## Exercise 4
 <div class='exercise' markdown="1">
-	1. Create a new folder in your documents called 'coding_course'
-	2. Inside that create another folder called 'first_site'
-	3. Open Sublime Text
-	4. Write "Hello"
-	5. Save the file as 'index.html' in the 'first_site' folder
-	6. Open 'index.html' in Chrome (File > Open ...)
+1. Create a new folder in your documents called 'coding_course'
+2. Inside that create another folder called 'first_site'
+3. Open Sublime Text
+4. Write "Hello"
+5. Save the file as 'index.html' in the 'first_site' folder
+6. Open 'index.html' in Chrome (File > Open ...)
 </div>
 
 ## Exercise 5
@@ -44,9 +44,9 @@
 
 ## Exercise 6
 <div class='exercise' markdown="1">
-	1. Go to [github.com/TomClose/first_site/blob/master/index.html]
-	2. Click the 'Copy to Clipboard' button (just underneath 'Files')
-	3. Go to Sublime Text and create a new file
-	4. Paste the contents into the new file
-	5. Save it as 'toms_page.html' in 'first_site'
+1. Go to [github.com/TomClose/first_site/blob/master/index.html]
+2. Click the 'Copy to Clipboard' button (just underneath 'Files')
+3. Go to Sublime Text and create a new file
+4. Paste the contents into the new file
+5. Save it as 'toms_page.html' in 'first_site'
 </div>
