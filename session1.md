@@ -50,7 +50,7 @@ title: Session 1 Exercises
 
 ## Exercise 6
 <div class='exercise' markdown="1">
-1. Go to [](./example.html)
+1. Go to [the GitHub page](https://github.com/oxcodingcourse/oxcodingcourse.github.com/blob/master/example.html)
 2. Click the 'Copy to Clipboard' button (just underneath 'Files')
 3. Go to Sublime Text and create a new file
 4. Paste the contents into the new file
