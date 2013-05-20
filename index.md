@@ -9,7 +9,8 @@ title: Coding Course Notes
 
 - [Session 2 Cheatsheet](./session2_cheatsheet)
 - [Session 2 Notes](./session2_notes)
-<!-- - [session 3 cheatsheet](./session3_cheatsheet)
+<!--
+- [session 3 cheatsheet](./session3_cheatsheet)
 -  [Session 3 Notes](./session3_notes) -->
 
 <!-- ## Final session
